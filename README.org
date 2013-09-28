@@ -1,0 +1,48 @@
+* Evil Beginnings
+Are you a Vim user? Tempted to try Emacs? You've come to the right
+place...
+
+** About
+
+I'm a Vim user. My two favourite implementations of Vim are:
+
+1. Vim. (Most operating systems.)
+2. Evil. (Emacs OS only.)
+
+If you want to try Vim on the Emacs operating system, (for reasons
+including, but not limited to, Clojure awesomeness), this should be a
+good starting point.
+
+** Getting Started.
+
+The "try before you buy" setup is:
+
+#+BEGIN_SRC sh
+$ git clone TODO
+$ ( HOME=./EvilBeginnings emacs )
+#+END_SRC
+
+That'll let you give it a spin without making any changes outside the
+cloned directory. Note that the first time it runs, it'll download a
+many dependencies, so you'll need to be patient.
+
+Play around, and if you like what you see then:
+
+#+BEGIN_SRC sh
+$ cp ./EvilBeginnings/.emacs ~/
+#+END_SRC
+
+...to make it your default =emacs= setup.
+
+** Feedback
+
+This project will never be exactly like Vim, and it's not supposed to
+be. Emacs is a different beast. Rather, the aim is to allow you to
+carry your muscle-memory across to a new environment.
+
+If you try this project and /immediately/ miss Feature X, please let me
+know. It should probably be in here.
+
+If you try this project and a week later miss Feature X, please let me
+know anyway - I'd like to help - but it probably isn't a feature that
+belongs in this setup.
