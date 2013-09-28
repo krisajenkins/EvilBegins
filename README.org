@@ -1,4 +1,4 @@
-* Evil Beginnings
+* Evil Begins
 Are you a Vim user? Tempted to try Emacs? You've come to the right
 place...
 
@@ -10,16 +10,21 @@ I'm a Vim user. My two favourite implementations of Vim are:
 2. Evil. (Emacs OS only.)
 
 If you want to try Vim on the Emacs operating system, (for reasons
-including, but not limited to, Clojure awesomeness), this should be a
-good starting point.
+including, but not limited to, Clojure awesomeness), this should give
+you a good starting point.
 
 ** Getting Started.
 
 The "try before you buy" setup is:
 
 #+BEGIN_SRC sh
-$ git clone TODO
-$ ( HOME=./EvilBeginnings emacs )
+$ git clone git@github.com:krisajenkins/EvilBegins.git
+$ cd EvilBegins
+
+$ ( HOME=`pwd` emacs )
+
+# Alternatively OSX Users might prefer:
+$ ( HOME=`pwd` open /Applications/Emacs.app/ )
 #+END_SRC
 
 That'll let you give it a spin without making any changes outside the
@@ -29,7 +34,7 @@ many dependencies, so you'll need to be patient.
 Play around, and if you like what you see then:
 
 #+BEGIN_SRC sh
-$ cp ./EvilBeginnings/.emacs ~/
+$ cp ./EvilBegins/.emacs ~/
 #+END_SRC
 
 ...to make it your default =emacs= setup.
