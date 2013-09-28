@@ -52,3 +52,8 @@ feature of Vim.
 If you try this project and a week later miss Feature X, please let me
 know anyway - I'd like to help - but it probably it probably means
 you're ready to dive deeper into Emacs.
+
+** Credit
+
+This all stands on the glorious shoulders of [[https://gitorious.org/evil/pages/Home][evil-mode]]. All I'm really
+doing is packaging it up in an easy-to-get-started fashion.
