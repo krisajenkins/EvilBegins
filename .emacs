@@ -95,17 +95,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Filetype-style hooks.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Emacs Lisp
 (add-hook 'emacs-lisp-mode-hook
 	  '(lambda ()
 	     (require 'nrepl-eval-sexp-fu)
 	     (paredit-mode t)
-	     (rainbow-delimiters-mode t)
+	     (rainbow-delimiters-mode t)))
 
-	     (evil-define-key 'normal emacs-lisp-mode-map
-	       "K" '(lambda ()
-			 (interactive)
-			 (describe-function (symbol-at-point))))))
+(evil-define-key 'normal emacs-lisp-mode-map
+  "K" '(lambda ()
+	 (interactive)
+	 (describe-function (symbol-at-point))))
 
+;;; Clojure
 (add-hook 'clojure-mode-hook
 	  '(lambda ()
 	     (require 'nrepl-eval-sexp-fu)
