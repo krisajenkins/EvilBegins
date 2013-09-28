@@ -25,13 +25,13 @@
 		      )
   "A list of packages to check for and install at launch.")
 
-(defun my-packages-installed-p ()
-  (let ((all-installed-p t))
-    (dolist (package my-packages all-installed-p)
-      (when (not (package-installed-p package))
-	(setq all-installed-p nil)))))
+(defun my-packages-missing-p ()
+  (let ((missing-p nil)) ()
+       (dolist (package my-packages missing-p)
+	 (or (package-installed-p package)
+	     (setq missing-p t)))))
 
-(unless (my-packages-installed-p)
+(when (my-packages-missing-p)
   ;; check for new packages (package versions)
   (package-refresh-contents)
   ;; install the missing packages
@@ -40,7 +40,7 @@
       (package-install package))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Customizations
+;;; Customizations (from M-x customze-*)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -92,16 +92,6 @@
 ;; (key-chord-mode t)
 ;; (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Utilities
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun add-syntax-entries
-  (table type &rest chars)
-  "Add to the syntax TABLE entries of TYPE for the given CHARS.
-    
-    A convenient way to call modify-syntax-entry many times for the same type."
-  (assert (syntax-table-p table) t "TABLE must be a syntax-table.")
-  )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Filetype-style hooks.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
