@@ -114,9 +114,9 @@
 	     (paredit-mode t)
 	     (rainbow-delimiters-mode t)
 
-	     (let ((clojure-word-chars '(?- ?_ ?/ ?< ?> ?: ?' ?.)))
-	       (dolist (char clojure-word-chars nil)
-		 (modify-syntax-entry char "w" clojure-mode-syntax-table)))
+	     (mapc '(lambda (char)
+		      (modify-syntax-entry char "w" clojure-mode-syntax-table))
+		   '(?- ?_ ?/ ?< ?> ?: ?' ?.))
   
 	     (require 'clojure-test-mode)
   
