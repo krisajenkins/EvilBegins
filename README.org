@@ -8,10 +8,10 @@ I'm a Vim user. My two favourite implementations of Vim are:
 1. Vim. (Most operating systems.)
 2. Evil. (Emacs OS only.)
 
-If you want to try Vim on the Emacs operating system, (for reasons
-including, but not limited to, Clojure awesomeness), this should give
-you a good starting point. Broadly speaking, it gives you Vim-style
-editing with Emacs Lisp-style extension.
+If you want to try option 2, (for reasons including, but not limited
+to, Clojure awesomeness), this should give you a good starting
+point. Broadly speaking, it gives you Vim-style editing with Emacs
+Lisp-style extension.
 
 ** Getting Started.
 
