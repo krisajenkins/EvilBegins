@@ -34,7 +34,7 @@ many dependencies, so you'll need to be patient.
 Play around, and if you like what you see then:
 
 #+BEGIN_SRC sh
-$ cp ./EvilBegins/.emacs ~/
+$ cp ./.emacs ~/
 #+END_SRC
 
 ...to make it your default =emacs= setup.
