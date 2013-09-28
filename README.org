@@ -18,7 +18,7 @@ editing with Emacs Lisp-style extension.
 The "try before you buy" setup is:
 
 #+BEGIN_SRC sh
-$ git clone git@github.com:krisajenkins/EvilBegins.git
+$ git clone https://github.com/krisajenkins/EvilBegins.git
 $ cd EvilBegins
 
 $ ( HOME=`pwd` emacs )
