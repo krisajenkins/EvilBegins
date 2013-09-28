@@ -1,6 +1,5 @@
 * Evil Begins
-Are you a Vim user? Tempted to try Emacs? You've come to the right
-place...
+Are you a Vim user? Tempted to try Emacs? This is for you.
 
 ** About
 
@@ -11,7 +10,8 @@ I'm a Vim user. My two favourite implementations of Vim are:
 
 If you want to try Vim on the Emacs operating system, (for reasons
 including, but not limited to, Clojure awesomeness), this should give
-you a good starting point.
+you a good starting point. Broadly speaking, it gives you Vim-style
+editing with Emacs Lisp-style extension.
 
 ** Getting Started.
 
@@ -46,8 +46,9 @@ be. Emacs is a different beast. Rather, the aim is to allow you to
 carry your muscle-memory across to a new environment.
 
 If you try this project and /immediately/ miss Feature X, please let me
-know. It should probably be in here.
+know. It should probably be in here, especially if it's a built-in
+feature of Vim.
 
 If you try this project and a week later miss Feature X, please let me
-know anyway - I'd like to help - but it probably isn't a feature that
-belongs in this setup.
+know anyway - I'd like to help - but it probably it probably means
+you're ready to dive deeper into Emacs.
