@@ -19,7 +19,7 @@
 		      helm
 		      key-chord
 		      recentf
-		      rainbow-delimiters highlight paredit
+		      rainbow-delimiters highlight paredit smartparens
 		      clojure-mode clojure-test-mode clojure-cheatsheet
 		      nrepl nrepl-eval-sexp-fu ac-nrepl
 		      )
@@ -77,6 +77,7 @@
 ;;; Nice-to-haves...
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-surround-mode t)
+(smartparens-global-mode t)
 
 ;;; Ctrl-P-esq.
 (helm-mode t)
@@ -99,10 +100,10 @@
 (add-hook 'emacs-lisp-mode-hook
 	  '(lambda ()
 	     (require 'nrepl-eval-sexp-fu)
-	     (paredit-mode t)
 	     (rainbow-delimiters-mode t)))
 
 (evil-define-key 'normal emacs-lisp-mode-map
+  "\M-q" 'sp-indent-defun
   "K" '(lambda ()
 	 (interactive)
 	 (describe-function (symbol-at-point))))
@@ -111,7 +112,6 @@
 (add-hook 'clojure-mode-hook
 	  '(lambda ()
 	     (require 'nrepl-eval-sexp-fu)
-	     (paredit-mode t)
 	     (rainbow-delimiters-mode t)
 
 	     (mapc '(lambda (char)
@@ -127,5 +127,6 @@
 	     (add-to-list 'ac-modes 'nrepl-mode)))
 
 (evil-define-key 'normal clojure-mode-map
-    "gK" 'nrepl-src
-    "K"  'ac-nrepl-popup-doc)
+  "\M-q" 'sp-indent-defun
+  "gK" 'nrepl-src
+  "K"  'ac-nrepl-popup-doc)
