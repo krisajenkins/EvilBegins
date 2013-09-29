@@ -10,8 +10,8 @@ I'm a Vim user. My two favourite implementations of Vim are:
 
 If you want to try option 2, (for reasons including, but not limited
 to, Clojure awesomeness), this should give you a good starting
-point. Broadly speaking, it gives you Vim-style editing with Emacs
-Lisp-style extension.
+point. Broadly speaking, it gives you Vim-style editing in an Emacs
+environment.
 
 ** Getting Started.
 
