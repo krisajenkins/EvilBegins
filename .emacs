@@ -19,7 +19,7 @@
 		      helm
 		      key-chord
 		      recentf
-		      rainbow-delimiters highlight
+		      rainbow-delimiters highlight paredit
 		      clojure-mode clojure-test-mode clojure-cheatsheet
 		      nrepl nrepl-eval-sexp-fu ac-nrepl
 		      )
