@@ -68,8 +68,14 @@
   "gt" 'elscreen-next
   "gT" 'elscreen-previous)
 
+(evil-define-command evil-tabs-tabedit (file)
+  (interactive "<f>")
+  (elscreen-create)
+  (find-file file))
+(evil-ex-define-cmd "tabe[dit]" 'evil-tabs-tabedit)
 (evil-ex-define-cmd "tabc[lose]" 'elscreen-kill)
 (evil-ex-define-cmd "tabn[ew]" 'elscreen-create)
+
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
 ; TODO Map :Exp to helm/dired/diredp?
 
