@@ -86,7 +86,7 @@
 
 ;;; Ace Jump
 (evil-define-key 'normal global-map
-  ",w" 'ace-jump-word-mode)
+  "\\\\w" 'evil-ace-jump-word-mode)
 
 ;;; Uncomment these key-chord lines if you like that "remap 'jk' to ESC" trick.
 ;; (key-chord-mode t)
