@@ -51,8 +51,8 @@ know. It should probably be in here, especially if it's a built-in
 feature of Vim.
 
 If you try this project and a week later miss Feature X, please let me
-know anyway - I'd like to help - but it probably it probably means
-you're ready to dive deeper into Emacs.
+know anyway - I'd like to help - but it probably means you're ready to
+dive deeper into Emacs.
 
 ** Credit
 
