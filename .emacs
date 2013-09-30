@@ -77,7 +77,6 @@
 (evil-ex-define-cmd "tabn[ew]" 'elscreen-create)
 
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
-; TODO Map :Exp to helm/dired/diredp?
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Nice-to-haves...
