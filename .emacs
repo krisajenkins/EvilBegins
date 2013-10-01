@@ -14,7 +14,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (defvar my-packages '(evil 
-		      evil-leader surround
+		      evil-leader evil-tabs surround
 		      elscreen ace-jump-mode
 		      helm
 		      key-chord
@@ -62,19 +62,7 @@
 ;;; Basic Vim Emulation.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (evil-mode t)
-(elscreen-start)
-
-(evil-define-key 'normal global-map
-  "gt" 'elscreen-next
-  "gT" 'elscreen-previous)
-
-(evil-define-command evil-tabs-tabedit (file)
-  (interactive "<f>")
-  (elscreen-create)
-  (find-file file))
-(evil-ex-define-cmd "tabe[dit]" 'evil-tabs-tabedit)
-(evil-ex-define-cmd "tabc[lose]" 'elscreen-kill)
-(evil-ex-define-cmd "tabn[ew]" 'elscreen-create)
+(global-evil-tabs-mode 1)
 
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
 
