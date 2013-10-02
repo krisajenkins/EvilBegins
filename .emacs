@@ -15,6 +15,7 @@
 
 (defvar my-packages '(evil 
 		      evil-leader evil-tabs surround
+		      idle-highlight-mode
 		      elscreen ace-jump-mode
 		      helm
 		      key-chord
@@ -89,14 +90,20 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Filetype-style hooks.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun standard-lisp-modes ()
+  (require 'nrepl-eval-sexp-fu)
+  (idle-highlight-mode t)
+  (rainbow-delimiters-mode t)
+  (local-set-key (kbd "RET") 'newline-and-indent))
+
 ;;; Emacs Lisp
 (add-hook 'emacs-lisp-mode-hook
 	  '(lambda ()
-	     (require 'nrepl-eval-sexp-fu)
-	     (rainbow-delimiters-mode t)))
+	     (standard-lisp-modes)))
 
 (evil-define-key 'normal emacs-lisp-mode-map
   "\M-q" 'sp-indent-defun
+  "\C-c\C-c" 'eval-defun
   "K" '(lambda ()
 	 (interactive)
 	 (describe-function (symbol-at-point))))
@@ -104,8 +111,7 @@
 ;;; Clojure
 (add-hook 'clojure-mode-hook
 	  '(lambda ()
-	     (require 'nrepl-eval-sexp-fu)
-	     (rainbow-delimiters-mode t)
+	     (standard-lisp-modes)
 
 	     (mapc '(lambda (char)
 		      (modify-syntax-entry char "w" clojure-mode-syntax-table))
