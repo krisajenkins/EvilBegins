@@ -72,14 +72,12 @@
 (global-surround-mode t)
 (smartparens-global-mode t)
 
-;;; Ctrl-P-esq.
 (helm-mode t)
 (recentf-mode t)
-(evil-define-key 'normal global-map
-  "\C-p" 'helm-mini)
 
-;;; Ace Jump
 (evil-define-key 'normal global-map
+  "\C-p" 'helm-mini
+  "q:" 'helm-complex-command-history
   "\\\\w" 'evil-ace-jump-word-mode)
 
 ;;; Uncomment these key-chord lines if you like that "remap 'jk' to ESC" trick.
