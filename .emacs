@@ -65,6 +65,7 @@
 (global-evil-tabs-mode 1)
 
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
+(evil-ex-define-cmd "color[scheme]" 'customize-themes)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Nice-to-haves...
