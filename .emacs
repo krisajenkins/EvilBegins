@@ -15,7 +15,6 @@
 
 (defvar my-packages '(evil 
 		      evil-leader evil-tabs surround
-		      idle-highlight-mode
 		      elscreen ace-jump-mode
 		      helm
 		      key-chord
@@ -92,7 +91,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun standard-lisp-modes ()
   (require 'nrepl-eval-sexp-fu)
-  (idle-highlight-mode t)
   (rainbow-delimiters-mode t)
   (local-set-key (kbd "RET") 'newline-and-indent))
 
