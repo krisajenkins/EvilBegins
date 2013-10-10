@@ -40,6 +40,11 @@
       (package-install package))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Early requirements.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'auto-complete)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Customizations (from M-x customze-*)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
@@ -47,8 +52,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(nrepl-popup-stacktraces-in-repl t)
+ '(ac-auto-show-menu t)
+ '(ac-auto-start t)
+ '(ac-show-menu-immediately-on-auto-complete t)
  '(nrepl-hide-special-buffers t)
+ '(nrepl-popup-stacktraces-in-repl t)
  '(recentf-max-saved-items 50))
 
 (custom-set-faces
@@ -63,6 +71,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (evil-mode t)
 (global-evil-tabs-mode 1)
+(global-auto-complete-mode t)
 
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
 (evil-ex-define-cmd "color[scheme]" 'customize-themes)
