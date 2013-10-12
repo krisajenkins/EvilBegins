@@ -25,22 +25,25 @@
 		      )
   "A list of packages to check for and install at launch.")
 
-(defun my-packages-missing-p ()
-  (let ((missing-p nil)) ()
-       (dolist (package my-packages missing-p)
-	 (or (package-installed-p package)
-	     (setq missing-p t)))))
+(defun my-missing-packages ()
+  (let (missing-packages)
+    (dolist (package my-packages missing-packages)
+      (or (package-installed-p package)
+	  (push package missing-packages)))))
 
-(when (my-packages-missing-p)
-  ;; Check for new packages (package versions)
-  (package-refresh-contents)
-  ;; Install the missing packages
-  (dolist (package my-packages)
-    (when (not (package-installed-p package))
-      (package-install package)))
-  (let ((compile-window (get-buffer-window "*Compile-Log*")))
-    (if compile-window
-	(delete-window compile-window))))
+(let ((missing (my-missing-packages)))
+  (when missing
+    ;; Check for new packages (package versions)
+    (package-refresh-contents)
+    ;; Install the missing packages
+    (mapc (lambda (package)
+	    (when (not (package-installed-p package))
+	      (package-install package)))
+	  missing)
+    ;; Close the compilation log.
+    (let ((compile-window (get-buffer-window "*Compile-Log*")))
+      (if compile-window
+	  (delete-window compile-window)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Early requirements.
