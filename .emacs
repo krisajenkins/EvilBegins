@@ -74,7 +74,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (evil-mode t)
 (global-evil-tabs-mode 1)
-(global-auto-complete-mode t)
 
 (evil-ex-define-cmd "Exp[lore]" 'dired-jump)
 (evil-ex-define-cmd "color[scheme]" 'customize-themes)
@@ -82,6 +81,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Nice-to-haves...
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-auto-complete-mode t)
 (global-surround-mode t)
 (smartparens-global-mode t)
 
