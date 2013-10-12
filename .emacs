@@ -32,9 +32,9 @@
 	     (setq missing-p t)))))
 
 (when (my-packages-missing-p)
-  ;; check for new packages (package versions)
+  ;; Check for new packages (package versions)
   (package-refresh-contents)
-  ;; install the missing packages
+  ;; Install the missing packages
   (dolist (package my-packages)
     (when (not (package-installed-p package))
       (package-install package))))
