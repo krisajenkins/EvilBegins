@@ -37,7 +37,10 @@
   ;; Install the missing packages
   (dolist (package my-packages)
     (when (not (package-installed-p package))
-      (package-install package))))
+      (package-install package)))
+  (let ((compile-window (get-buffer-window "*Compile-Log*")))
+    (if compile-window
+	(delete-window compile-window))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Early requirements.
