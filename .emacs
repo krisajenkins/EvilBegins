@@ -110,6 +110,7 @@
   (require 'nrepl-eval-sexp-fu)
   (rainbow-delimiters-mode t)
   (require 'evil-paredit)
+  (paredit-mode t)
   (evil-paredit-mode t)
   (local-set-key (kbd "RET") 'newline-and-indent))
 
