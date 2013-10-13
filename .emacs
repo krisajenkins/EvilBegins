@@ -14,12 +14,12 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
 (defvar my-packages '(evil 
-		      evil-leader evil-tabs surround
+		      evil-leader evil-tabs evil-paredit surround
 		      elscreen ace-jump-mode
 		      helm
 		      key-chord
 		      recentf smart-mode-line
-		      rainbow-delimiters highlight paredit smartparens
+		      rainbow-delimiters highlight
 		      clojure-mode clojure-test-mode clojure-cheatsheet
 		      nrepl nrepl-eval-sexp-fu ac-nrepl
 		      )
@@ -86,7 +86,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (global-auto-complete-mode t)
 (global-surround-mode t)
-(smartparens-global-mode t)
 
 (helm-mode t)
 (recentf-mode t)
@@ -110,6 +109,8 @@
 (defun standard-lisp-modes ()
   (require 'nrepl-eval-sexp-fu)
   (rainbow-delimiters-mode t)
+  (require 'evil-paredit)
+  (evil-paredit-mode t)
   (local-set-key (kbd "RET") 'newline-and-indent))
 
 ;;; Emacs Lisp
