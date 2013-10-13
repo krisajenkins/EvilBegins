@@ -18,7 +18,7 @@
 		      elscreen ace-jump-mode
 		      helm
 		      key-chord
-		      recentf
+		      recentf smart-mode-line
 		      rainbow-delimiters highlight paredit smartparens
 		      clojure-mode clojure-test-mode clojure-cheatsheet
 		      nrepl nrepl-eval-sexp-fu ac-nrepl
@@ -90,6 +90,10 @@
 
 (helm-mode t)
 (recentf-mode t)
+
+(if after-init-time
+    (sml/setup)
+  (add-hook 'after-init-hook 'sml/setup))
 
 (evil-define-key 'normal global-map
   "\C-p" 'helm-mini
