@@ -16,7 +16,7 @@
 (defvar my-packages '(evil 
 		      evil-leader evil-tabs evil-paredit surround
 		      elscreen ace-jump-mode
-		      helm
+		      helm helm-descbinds
 		      key-chord
 		      recentf smart-mode-line
 		      rainbow-delimiters highlight
@@ -92,6 +92,7 @@
 (global-surround-mode t)
 
 (helm-mode t)
+(helm-descbinds-mode t)
 (recentf-mode t)
 
 (if after-init-time
