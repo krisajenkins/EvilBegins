@@ -28,7 +28,7 @@
 
 (defun my-missing-packages ()
   (let (missing-packages)
-    (dolist (package my-packages missing-packages)
+    (dolist (package my-packages (reverse missing-packages))
       (or (package-installed-p package)
 	  (push package missing-packages)))))
 
