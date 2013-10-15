@@ -125,7 +125,7 @@
 	     (standard-lisp-modes)))
 
 (evil-define-key 'normal emacs-lisp-mode-map
-  "\M-q" 'sp-indent-defun
+  "\M-q" 'paredit-reindent-defun
   "\C-c\C-c" 'eval-defun
   "K" '(lambda ()
 	 (interactive)
@@ -149,6 +149,6 @@
 	     (add-to-list 'ac-modes 'nrepl-mode)))
 
 (evil-define-key 'normal clojure-mode-map
-  "\M-q" 'sp-indent-defun
+  "\M-q" 'paredit-reindent-defun
   "gK" 'nrepl-src
   "K"  'ac-nrepl-popup-doc)
