@@ -20,6 +20,7 @@
 		      key-chord
 		      recentf smart-mode-line
 		      rainbow-delimiters highlight
+		      paredit smartparens
 		      clojure-mode clojure-test-mode clojure-cheatsheet
 		      nrepl nrepl-eval-sexp-fu ac-nrepl
 		      )
