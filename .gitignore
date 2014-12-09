@@ -1,6 +1,9 @@
 /.emacs.d/elpa/
-/.recentf
+/.emacs.d/ac-comphist.dat
 /.emacs-places
+/.recentf
 /NOTES.org
 /README.html
-/.emacs.d/ac-comphist.dat
+/.lein/
+/.m2/
+/.emacs.d/url/cookies
