@@ -1,4 +1,10 @@
 * Evil Begins
+
+*Deprecated* If you want an easy way to get started with an Emacs/Vim
+hybrid, these days [[http://spacemacs.org/][Spacemacs]] is probably your best choice.
+
+** Overview
+
 Are you a Vim user? Tempted to try Emacs? This is for you.
 
 ** About
